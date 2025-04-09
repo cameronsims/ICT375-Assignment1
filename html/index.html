@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>ICT375 - 34829454</title>
+		<meta charset="utf-8">
+		
+		<!-- JQuery to handle AJAX etc... -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+	
+		<!-- Javascript -->
+		<script src="./js/formValidation.js"></script>
+		
+		<!-- CSS -->
+		<link rel="stylesheet" type="text/css" href="./css/style.css">
+	</head>
+	<body>
+		<!-- Header non-sense -->
+		<h1>ICT375 - Assignment 1</h1>
+		<h2>Cameron Sims (34829454)</h2>
+		
+		<p><a href="#submit-student">Submit Student Details</a></p>
+		<p><a href="#search-student">Search Student Details</a></p>
+		
+		<!-- Student Submission -->
+		<hr/>
+		<h3 id="submit-student">Submit Student Details</h3>
+		<form id="submit" name="submit" action="/submit" method="POST" accept-charset="utf-8">
+			<p>
+				<!--<label>Student ID: </label>-->
+				<input id="studentID"      name="studentID"      type="text"   placeholder="Student ID"/>
+			</p>
+			<p>
+				<!--<label>Full Name: </label>-->
+				<input id="studentFName"   name="studentFName"   type="text"   placeholder="First Name"/>
+				<input id="studentLName"   name="studentLName"   type="text"   placeholder="Last Name"/>
+			</p>
+			<p>
+				<!--<label>Age: </label>-->
+				<input id="studentAge"     name="studentAge"     type="number" placeholder="Age"/>
+			</p> 
+			<p>
+				<!--<label>Gender: </label>-->
+				<select id="studentGender" name="studentGender">
+					<option>Male</option>
+					<option>Female</option>
+					<option>Other</option>
+				</select>
+			</p>
+			<p>
+				<!--<label>Student Degree:</label>-->
+				<input id="studentDegree"  name="studentDegree" type="text"   placeholder="Degree"/><br/>
+			</p>
+			<p>
+				<!--<label>Profile Picture Submit: </label>-->
+				<input id="studentPFP"     name="studentPFP"    type="file"/>
+			</p>
+			<button type="submit">Submit</button>
+		</form>
+		<div id="submit-errorbin"></div>
+		
+		<!-- Student Retrieval -->
+		<hr/>
+		<h3 id="search-student">Search Student Details</h3>
+		<form id="find" name="find" action="/find" method="GET" accept-charset="utf-8"> 
+			<input id="query" name="query" type="text" placeholder="Query"/>
+			<button type="submit">Submit</button>
+		</form>
+		<table id="request-results"></table>
+	</body>
+</html>

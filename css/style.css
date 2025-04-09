@@ -1,0 +1,98 @@
+html {
+	margin: 0rem;
+	padding: 1rem;
+
+	font-size: 1.5rem;
+	font-family: calibri;
+}
+
+form {
+	padding: 0rem 0.75rem;
+}
+
+
+input[type="text"]::placeholder, input[type="number"]::placeholder {
+	color: darkgrey;
+	display: block;
+	font-style: italic;
+}
+input, select, button {
+	width: 100%;
+}
+input:hover, select:hover, button:hover {
+	border-color: darkgrey;
+	background: darkgrey;
+}
+input:active, select:active, button:active {
+	border-color: red;
+	background: red;
+}
+input[type="text"], input[type="number"], input[type="file"]::file-selector-button, select, button {
+	background: lightgrey;
+	color: black;
+
+	font-size: 0.75rem;
+	box-sizing: border-box;
+
+	margin-top: 0.2rem;
+	border: 0.1rem solid lightgrey;
+	border-radius: 1rem;
+	padding: 0.25rem 0.75rem;
+}
+
+input[type="file"]::file-selector-button {
+	width: auto;
+}
+
+.error, .success {
+	border: 0.25rem solid white;
+	border-radius: 1rem;
+	background: white;
+	padding: 0.5rem 1.0rem;
+
+	font-weight: bold;
+}
+
+.error {
+	border-color: salmon;
+	background: salmon;
+}
+
+.success {
+	border-color: darkseagreen;
+	background: darkseagreen;
+}
+
+table {
+	margin-top: 1rem;
+	border-spacing: 0rem;
+	
+	width: 100%;
+	text-align: center;
+}
+
+tr {}
+
+th, td { 
+	border-top: 0.2rem solid lightgrey;
+	border-left: 0.2rem solid lightgrey;
+	padding: 1rem;
+}
+
+th:last-child, td:last-child {
+	border-right: 0.2rem solid lightgrey;
+}
+
+tr:last-child td, tr:last-child {
+	border-bottom:  0.2rem solid lightgrey;
+}
+
+td:has(img) {
+	padding: 0rem;
+}
+
+td img {
+	margin: 0;
+	max-width: 6rem;
+	width: 100%;
+}

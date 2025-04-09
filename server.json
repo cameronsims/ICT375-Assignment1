@@ -1,0 +1,11 @@
+{
+	"url": "eris.ad.murdoch.edu.au",
+	"port": 40200,
+	
+	"dbFile": "./data/students.csv",
+	
+	"html": {
+		"root": "./html/index.html",
+		"notfound": "./html/notfound.html"
+	}
+}
